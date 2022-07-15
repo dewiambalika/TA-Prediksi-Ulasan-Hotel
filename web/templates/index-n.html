@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Predict Hotel Reviews</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="jumbotron">
+                <p height ="100px"></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><button onclick="scrollhome()">Home</button></li>
+                    <li><button onclick="scrollpart1()">Predict</button></li>
+                    <li><button onclick="scrollpart2()">About</button></li>
+                </ul> 
+            </nav>
+        </header>
+        <main>
+            <div id="content">
+                <article id="home" class="card">
+                    <h3><b>Hotel Reviews Prediction</b></h3><br>
+                    <p>Sistem machine learning untuk memprediksi Ulasan Pelanggan Hotel di Bali</p>
+                    <center>
+                        <img src="../static/home.jpeg" alt="Hotel" width="800px">
+                    </center>
+                </article>
+
+                <article id="predict" class="card">
+                    <h3><b>Prediction</b></h3> <br>
+                    <p>Masukkan ulasan pelanggan dan tekan tombol <b>"Predict"</b> untuk mengetahui hasil prediksi ulasan</p>
+                    
+                    <form class="p-3 text-center" action='text', method="post" enctype="multipart/form-data">
+                        <input class="form-control" type="text" name="imagefile"> <br>
+                        <input class="button" type="submit" value="Predict">
+                    </form>
+                    <!-- {% if prediction %}
+                        <img src="{{image}}" class="rounded mx-auto d-block" height="300px" width="300px" alt="Gambar Chest X-Ray"><br> -->
+                        <div class="row mb-4 d-flex justify-content-center">
+                            <div class="col-md-7">
+                              <div class="card text-dark">
+                                <div class="card-body">
+                                  <h4 style="color: black;" class="card-title">Ulasan Pelanggan :</h4>
+                                  <br> hari ini kami mendapatkan pengalaman yang menarik selama menginap diaksari villa dengan pasangan ,, oasilitas yang menarik dan villa yang bersih..sungguh sangat mengesankan dan berharap bisa kembali lagi suatu saat nanti.
+                                  <p class="card-text"></p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- <p class="text-center"> check-in lambat  staf tidak ramah melayani. bad lah.</p> -->
+                        <p class="text-center"> Hasil prediksi menunjukkan <b>KEBERSIHAN - Positif</b></p>
+                    <!-- {% endif %} -->
+                </article>
+
+                <article id="about" class="card">
+                    <h3><b>Informasi</b></h3> <br>
+                    <h4><b>Petunjuk Penggunaan</b></h4>
+                    <p>Pertama-tama, pilih menu <b>Predict</b>. <br>Pada bagian menu tersebut, masukkan ulasan pelanggan hotel di Bali. <br>Kemudian tekan tombol <b>Predict</b> untuk melihat hasil prediksi ulasan.</p>
+                    <br>
+                    <!-- <h4><b>Referensi Dataset</b></h4>
+                    <a href="https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia">Dataset reference on Kaggle</a> -->
+                </article>
+            </div>
+        </main>
+        <footer>
+            &copy; 2022, Dewi Ambalika
+        </footer>
+
+        <script>
+            function scrollhome() {
+                document.querySelector('#home').scrollIntoView ({
+                    behavior: "smooth"
+                });
+            };
+            function scrollpart1() {
+                document.querySelector('#predict').scrollIntoView ({
+                    behavior: "smooth"
+                });
+            };
+            function scrollpart2() {
+                document.querySelector('#about').scrollIntoView ({
+                    behavior: "smooth"
+                });
+            };
+        </script>
+
+    </body>
+</html>
